@@ -1,0 +1,32 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap w/ Vite - Pong 42</title>
+<link rel="stylesheet" href="{% static 'pong/css/game.css' %}">
+<link rel="stylesheet" href="{% static 'pong/css/styles.css' %}">
+</head>
+<body id="body">
+	<div class="container-fluid">
+		<div id="matchmaking">
+			<div class="row justify-content-center align-items-center" style="margin-bottom: 7rem; margin-top: 3rem;">
+				<h5 class="display-1 text-center" style="font-size:3.5rem">Searching for an opponent...</h5>
+			</div>
+			<div class="row justify-content-center align-items-center">
+				<div class="spinner-border text-primary" role="status"></div>
+			</div>
+		</div>
+		<div class="row text-center justify-content-center gx-2" id="game">
+			<div class="col-sm-12 col-md-3 col-xl-3 justify-content-center" id="banner"></div>
+			<div class="col-sm-12 col-md-5 col-xl-5 justify-content-center">
+					<canvas id="pongCanvas" width="800" height="800"></canvas>
+			</div>
+			<div class="col-sm-12 col-md-3 col-xl-3 justify-content-top" id="scoreBoard"></div>
+		</div>
+	</div>
+<script type="module" src="{% static 'pong/js/game.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{% load static %}
+
+<div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap w/ Vite - Pong 42</title>
+    <link rel="stylesheet" href="{% static 'pong/css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'pong/css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'pong/css/footer.css' %}">
+  </head>
+  <body id="body">
+
+	  <!-- Profile page -->
+	  <div id="profileBody" class="container main-content" style="margin-top: 2.5rem;">
+      <div id="header" class="row text-center"  style="margin-bottom: 2.5rem;">
+        <div class="col d-flex align-items-center justify-content-start">
+          <img id="profilePicture" src="" alt="profilePicture">
+        </div>
+        <div id="namePlate" class="col d-flex  align-items-center justify-content-center">
+          <h3 id="displayName"></h3>
+        </div>
+        <div id="stats" class="col d-flex  align-items-center justify-content-center gap-3">
+          <p id="winsRatio"></p>
+          <button id="matchHistoryButton" class="btn btn-primary rounded-pill px-3" type="button">Match History</button>
+        </div>
+      </div>
+      <div id="matchHistory" class="row text-center d-flex justify-content-center"></div>
+	  </div>
+
+    
+
+  <script type="module" src="{% static 'pong/js/profile.js' %}"></script>
+
+  </body>
+ 
+</div>
